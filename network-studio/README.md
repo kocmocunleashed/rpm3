@@ -12,6 +12,17 @@ bun run dev --port 5173 --strictPort
 
 Open <http://localhost:5173>. Every chapter has one highlighted takeaway, one familiar example, and a working model. The takeaway stays visible while scrolling on a phone. The **Хураангуй** overview gathers all ten ideas; use it to jump directly to a chapter. **→ / Page Down / Space** advances the current demonstration one step, then moves to the next chapter after its final step. **← / Page Up / Shift+Space** reverses a step; crossing a chapter boundary opens the previous chapter at its last demonstration. **Home / End** jumps to the first or last chapter, and **F** toggles fullscreen. Native controls keep their own keys while focused. Direct links work, including `/#intro` for Spotify and `/#scale` for the Counter-Strike LAN example. Dialogs support Escape, and reduced-motion users can still operate the demonstrations.
 
+## Deploy to Vercel
+
+Import this repository with Root Directory set to the repository root (`.`).
+The root `vercel.json` selects Vite, installs this app's locked dependencies,
+builds inside `network-studio`, and publishes `network-studio/dist`. These
+settings override a previously detected Next.js preset.
+
+The root Next.js starter is a separate application. Running its build would
+type-check the nested presentation without installing this app's dependencies.
+Use the committed Vercel configuration to deploy the presentation.
+
 ## Ten chapters
 
 1. Spotify streaming: request audio, watch chunks return through the network, then play from a partial buffer while more arrive.

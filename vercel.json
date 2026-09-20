@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "cd network-studio && bun install --frozen-lockfile",
+  "buildCommand": "cd network-studio && bun run build",
+  "outputDirectory": "network-studio/dist"
+}
